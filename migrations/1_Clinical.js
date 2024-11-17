@@ -3,5 +3,10 @@ module.exports=async function(deployer)
 {
     deployer.deploy(ClinicalTrails)
     const instance = await MyContract.deployed();
+}
+async function testContract(instance){
+    try{
+      
+    }catch(error){}
     
 }
