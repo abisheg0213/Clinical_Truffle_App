@@ -7,14 +7,22 @@ async function getAddress() {
   return accounts.slice(0, 10);
 }
 
-async function register_FDA(instance, address) {
-  console.log("FDA Authority Registered");
-  // Additional registration logic goes here if needed
+async function submit_application(instance,hash,status ) {
+  const data=await instance.submit_Application(hash,status,{value:200})
+    console.log(data)
 }
-
+async function approve_application(instance,app_id,status,fda) {
+    const data=await instance.approve_application(app_id,status,{from:fda})
+    console.log(data)
+}
+async function name(params) {
+    
+}
 module.exports = async function (deployer) {
   const addresses = await getAddress();
-  await deployer.deploy(ClinicalTrails, addresses[0]);
+  await deployer.deploy(ClinicalTrails, addresses[6]);
+  fda_authority=addresses[6]
   const instance = await ClinicalTrails.deployed();
-  await register_FDA(instance, addresses);
+  await submit_application(instance,"0x5765676",true)
+  await approve_application(instance,1,true,fda_authority)
 };
