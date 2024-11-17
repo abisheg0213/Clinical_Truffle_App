@@ -1,1 +1,10 @@
-{ "pid": 12, "amt": 40 }
+[
+  { "pid": 12, "amt": 40 },
+  { "pid": 12, "amt": 40, "thres": 10, "rate": 100 },
+  { "hid": 30 },
+  { "docid": 12 },
+  { "patid": 20, "hid": 30 },
+  { "hid": 30, "pid": 12, "amt": 7, "docid": 12, "patid": 20 },
+  { "pid": 12, "amt": 40 },
+  { "pid": 12 }
+]
