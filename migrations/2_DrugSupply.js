@@ -4,11 +4,6 @@ const web3 = new Web3("http://localhost:8545");
 
 const config = require("../config.json");
 const { from } = require("responselike");
-const { waitForDebugger } = require("inspector");
-const { inspect } = require("util");
-const { pid } = require("process");
-const { isContractAddressInBloom } = require("web3-utils");
-const { log } = require("console");
 
 async function getAddress() {
   const accounts = await web3.eth.getAccounts();
@@ -67,15 +62,26 @@ async function buy_drg(instance, hid, pid, amt, docid, patid, hosman) {
   );
 }
 
+//Other Functionalites
+async function update_av(instance, pid, amt, manger) {
+  const data = await instance.update_avail(pid, amt, { from: manger });
+  console.log(`New Product of ${pid} added with ${amt}`);
+}
+
+async function drug_avl(instance, pid) {
+  const data = await instance.drug_av(pid);
+  console.log(`Avilable amt of ${pid} :  `); //amt should be replaced
+}
 module.exports = async function (deployer) {
   const addresses = await getAddress();
 
   const con_owner = addresses[0];
   const producer = addresses[1];
-  const manger = addresses[1];
+  // const manger = addresses[2];
+  const manger = con_owner;
   const hospital = addresses[2];
 
-  await deployer.deploy(Drugcompany, con_owner);
+  await deployer.deploy(Drugcompany, hospital);
   const instance = await Drugcompany.deployed();
 
   // Producer
@@ -94,10 +100,10 @@ module.exports = async function (deployer) {
 
   //hospital
   await reg_host(instance, config[2].hid, hospital);
-  await reg_doctors(instance, config[3].docid);
-  await reg_patients(instance, config[4].patid, config[4].hosid, hospital);
+  await reg_doctors(instance, config[3].docid, hospital);
+  await reg_patients(instance, config[4].patid, config[4].hid, hospital);
   await buy_drg(
-    inspect,
+    instance,
     config[5].hid,
     config[5].pid,
     config[5].amt,
@@ -107,6 +113,7 @@ module.exports = async function (deployer) {
   );
 
   // other fuctionalities
-  await update_avail(config[5].pid, config[5].amt, manger);
-  await drug_avl(config[6].pid);
+  await add_produced_drugs(instance, config[5].pid, config[5].amt, producer);
+  await update_av(instance, config[6].pid, config[6].amt, manger);
+  await drug_avl(instance, config[7].pid);
 };
