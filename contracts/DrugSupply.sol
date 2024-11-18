@@ -104,7 +104,7 @@ contract Drugcompany
         // prodid+=1;
         emit added_drug_event(p,a,t,r);
     }
-    function update_avail(uint pi,uint k) public onlydm(msg.sender) validam(k,pi)
+    function update_avail(uint pi,uint k) public onlydm(msg.sender)
     {
         drugs[pi].avail+=k;
     }
