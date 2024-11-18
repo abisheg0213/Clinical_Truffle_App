@@ -16877,10 +16877,292 @@
       "links": {},
       "address": "0xB39fDCC0e8F507171811B95fc7e5Fc80ca695c98",
       "transactionHash": "0x5eb56e2a548b457ee6428994303cdf82cd2936076d0a31d04f0c863e84bee861"
+    },
+    "1731959003650": {
+      "events": {
+        "0xf209641dbbfea29f36c85a98f3781654f87f6a5427bd0f88b52f6353efe3decb": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "p",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "a",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "t",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "r",
+              "type": "uint256"
+            }
+          ],
+          "name": "added_drug_event",
+          "type": "event"
+        },
+        "0xf4bde78c1d32f2ac2fe5eed266850a1d02f14180803baf3f51409bffcfbf31fc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "h",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "porid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "req_amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "did",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "patid",
+              "type": "uint256"
+            }
+          ],
+          "name": "drug_bought_event",
+          "type": "event"
+        },
+        "0xad32602579d59f74a6e90d4d217f9fe79c532c141516483e316e255eb91c7493": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "a",
+              "type": "uint256"
+            }
+          ],
+          "name": "produced_drug_event",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x0ac9F7598A0d808aD7C0e95237520c2fDe78EeEc",
+      "transactionHash": "0xe5978db0e442f07de4082f0ac264e706fe2903291edcdfc425a3b492d6cba92e"
+    },
+    "1731960705097": {
+      "events": {
+        "0xf209641dbbfea29f36c85a98f3781654f87f6a5427bd0f88b52f6353efe3decb": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "p",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "a",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "t",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "r",
+              "type": "uint256"
+            }
+          ],
+          "name": "added_drug_event",
+          "type": "event"
+        },
+        "0xf4bde78c1d32f2ac2fe5eed266850a1d02f14180803baf3f51409bffcfbf31fc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "h",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "porid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "req_amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "did",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "patid",
+              "type": "uint256"
+            }
+          ],
+          "name": "drug_bought_event",
+          "type": "event"
+        },
+        "0xad32602579d59f74a6e90d4d217f9fe79c532c141516483e316e255eb91c7493": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "a",
+              "type": "uint256"
+            }
+          ],
+          "name": "produced_drug_event",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x1913a92Bf906eBF9966FAC3F26161C9EC50Bcac7",
+      "transactionHash": "0xdc5dd3ab39de6a57cb7495bf72dfd3a829996e0c8087ed705937deba592b098f"
+    },
+    "1731961031535": {
+      "events": {
+        "0xf209641dbbfea29f36c85a98f3781654f87f6a5427bd0f88b52f6353efe3decb": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "p",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "a",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "t",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "r",
+              "type": "uint256"
+            }
+          ],
+          "name": "added_drug_event",
+          "type": "event"
+        },
+        "0xf4bde78c1d32f2ac2fe5eed266850a1d02f14180803baf3f51409bffcfbf31fc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "h",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "porid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "req_amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "did",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "patid",
+              "type": "uint256"
+            }
+          ],
+          "name": "drug_bought_event",
+          "type": "event"
+        },
+        "0xad32602579d59f74a6e90d4d217f9fe79c532c141516483e316e255eb91c7493": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "a",
+              "type": "uint256"
+            }
+          ],
+          "name": "produced_drug_event",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x1DEA55c290Bc257dd29d3c4d9844F781d0B15990",
+      "transactionHash": "0x276d87b3494c3d5a2a078176418908dc6132c377f5ab326055acb714772fb076"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-11-18T19:39:31.070Z",
+  "updatedAt": "2024-11-18T20:17:48.005Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
