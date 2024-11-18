@@ -2,7 +2,7 @@ var Drugcompany = artifacts.require("./Drugcompany.sol");
 const Web3 = require("web3");
 const web3 = new Web3("http://localhost:8545");
 
-const config = require("../config.json");
+const config = require("../config_drug.json");
 const { from } = require("responselike");
 
 async function getAddress() {
