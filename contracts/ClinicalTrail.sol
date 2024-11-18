@@ -64,7 +64,7 @@ mapping(uint=>address) public ct_to_physican;
         }
 
     }
-    function valid_sponsor(address j) private view returns(bool)
+    function valid_sponsor(address j) public view returns(bool)
     {
         uint flag=0;
         for(uint i=0;i<sponsors.length;i++)
@@ -99,7 +99,7 @@ mapping(uint=>address) public ct_to_physican;
        Clinical_Trails[CT_number].CT_approved=true;
     }
     function assign_physician(uint cid,address phy) public {
-        require(valid_sponsor(msg.sender),"Not allowed to assign physician");
+        require(valid_sponsor(msg.sender)==true,"Not allowed to assign physician");
         ct_to_physican[cid]=phy;
         physician=phy;
     }
