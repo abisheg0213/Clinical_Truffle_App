@@ -87,7 +87,12 @@ async function enter_result(instance, pid, res) {
 }
 async function declare_trail_result(instance, cid) {
   const data = await instance.declare_trail_result(cid);
-  console.log(data);
+  if(!data){
+  console.log("The Results of the clinical Trail is that Drug Not Approved for supply");
+  }
+  else{
+  console.log("The Results of the clinical Trail is that Drug Approved for supply");
+  }
 }
 async function validsp(instance, add) {
   const data = await instance.valid_sponsor(add);
